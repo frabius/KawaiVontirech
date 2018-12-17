@@ -1,5 +1,13 @@
 {% extends 'base.html.twig' %}
 {% block content %}
+<header>
+	<h2>Mes derniers articles</h2>
+</header>						
+	<p>
+	{% for item in articles %}
+        <h3>{{ item.Contenue }}</h3>
+    {% endfor %}
 
+	</p>
 {% endblock %}
 

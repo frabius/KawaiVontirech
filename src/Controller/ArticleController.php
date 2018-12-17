@@ -15,14 +15,14 @@ class ArticleController extends AbstractController
     public function index()
     {
 
-    	 $article = $this->getDoctrine()
+    	 $articles = $this->getDoctrine()
         ->getRepository(Article::class)
         ->findall();
         
 
 
     return $this->render('article/index.html.twig', [
-            'article' => $article,
+            'articles' => $articles,
         ]);
   
     }
